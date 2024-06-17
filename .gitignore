@@ -1,0 +1,7 @@
+*.elf
+*.ko
+*.mod
+data*
+nohup.out
+.vscode
+usesec24-ae-latex.zip
