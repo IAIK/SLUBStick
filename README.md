@@ -3,7 +3,7 @@
 # SLUBStick Artifacts
 
 This repo contains artifacts developed during a research project, as well as the code to perform SLUBStick.
-For convenience, we provide a Virtual Machine (VM) image ([image](https://todo.todo)) with all necessary programs and scripts included.
+For convenience, we provide a Virtual Machine (VM) [image](https://doi.org/10.5281/zenodo.11943102) with all the necessary programs and scripts included.
 
 ## What is SLUBStick
 
@@ -11,7 +11,7 @@ SLUBStick is a kernel exploitation technique that elevates a heap vulnerability 
 Initially, it exploits a timing side channel of the allocator to reliably perform a cross-cache attack with better than 99% success rate on commonly used generic caches.
 SLUBStick then exploits code patterns prevalent in the Linux kernel to perform a cross-cache attack and turn a heap vulnerability into a page table manipulation, thereby granting the capability to read and write memory arbitrarily.
 
-The artifacts demonstrate the timing side channel and end-to-end exploits, showing the versatility of SLUBStick.
+The artifacts demonstrate the timing side channel and end-to-end exploits.
 For both, we provide an environment of a VM running Linux kernel x86_64 v6.2.
 For the timing side channel, the evaluation presents success rates for slab pages.
 For the end-to-end exploits, our attacks exploits an artificial Double Free (DF) vulnerability to obtain an arbitrary physical read and write primitive.
@@ -31,6 +31,10 @@ cd SLUBStick
 download vm and store in images
 make run
 ```
+
+The VM image is the default Ubuntu 22.04 image running the Linux kernel v6.2.
+The username to log in is `lmaar`, and the password is `asdf`.
+This user is in the `sudo` group and, thereby, can gain root privileges via `sudo su`.
 
 ## Experiments
 
