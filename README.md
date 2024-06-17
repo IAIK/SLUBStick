@@ -28,7 +28,7 @@ To install SLUBStick, run the following command:
 ```
 git clone https://github.com/IAIK/SLUBStick.git
 cd SLUBStick
-download vm and store in images
+<download ubuntu22.04.qcow2 from https://doi.org/10.5281/zenodo.11943102 and store in images>
 make run
 ```
 
