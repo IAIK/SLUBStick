@@ -1,6 +1,9 @@
 run:
 	./start-qemu.sh
 
+no-graphic:
+	./start-qemu.sh
+
 server:
 	./start-server.sh
 

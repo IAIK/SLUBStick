@@ -36,6 +36,23 @@ The VM image is the default Ubuntu 22.04 image running the Linux kernel v6.2.
 The username to log in is `lmaar`, and the password is `asdf`.
 This user is in the `sudo` group and, thereby, can gain root privileges via `sudo su`.
 
+### Set-up
+
+ - Execute `make run` boots the VM, providing a terminal login prompt and an already logged in user on a graphical interface, i.e., Gnome.
+ - Either login in the terminal (with username `lmaar` and password `asdf`) or open a terminal in the graphical interface.
+ - Execute `uname -r` should return `6.2.0-x-generic`.
+ - The directory `/home/lmaar/exploits` should include `helper.c`, `do\_eval*.sh`, and `eval.py`.
+ - The directory `/home/lmaar/exploits/userspace` should include `*.c`.
+ - Change directory to `/home/lmaar/exploits` and execute `make init`.
+
+### Changes
+
+If you want to adjust files within the VM:
+
+ - Execute `make server 2&> /dev/null&` on the host.
+ - Execute `make run`.
+ - Change directory to `/home/lmaar/exploits` and execute `make sync` and then `make init`.
+
 ## Experiments
 
 In the following, we demonstrate experiments of the timing side channel and exploit using SLUBStick:
